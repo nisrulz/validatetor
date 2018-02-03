@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">ValidateTor</string>
+  <string name="email">Email</string>
+  <string name="password">Password</string>
+  <string name="credit_card">Credit Card Number</string>
+  <string name="validate">Validate</string>
+</resources>
