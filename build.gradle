@@ -41,5 +41,10 @@ ext {
   // ValidateTor Library Info
   libVersionCode = 1
   libVersionName = '1.0.0'
+  libPomUrl = 'https://github.com/nisrulz/validatetor'
+  libGithubRepo = 'nisrulz/validatetor'
+  libModuleName = 'validatetor'
+  libModuleDesc = 'Android library for fast and simple string validation.'
+  libBintrayName = 'validatetor'
 
 }
