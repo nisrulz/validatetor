@@ -37,4 +37,9 @@ ext {
   junitVersion = "4.12"
   testRunnerVersion = "1.0.1"
   espressoCoreVersion = "3.0.1"
+
+  // ValidateTor Library Info
+  libVersionCode = 1
+  libVersionName = '1.0.0'
+
 }

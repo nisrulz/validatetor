@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion 27
-  buildToolsVersion "27.0.3"
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
-    minSdkVersion 14
-    targetSdkVersion 27
-    versionCode 1
-    versionName "1.0"
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.libVersionCode
+    versionName rootProject.ext.libVersionName
 
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -26,5 +26,6 @@ android {
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  testImplementation 'junit:junit:4.12'
+  // Testing
+  testImplementation "junit:junit:$rootProject.ext.junitVersion"
 }
