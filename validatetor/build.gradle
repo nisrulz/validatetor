@@ -29,3 +29,6 @@ dependencies {
   // Testing
   testImplementation "junit:junit:$rootProject.ext.junitVersion"
 }
+
+// applied specifically at the bottom
+apply from: './scripts/bintrayConfig.gradle'
