@@ -1,6 +1,63 @@
-# ValidateTor
+<div align="center">
+    <img src="img/github_banner.png"/>
+</div>
 
-ValidateTor: Android library for fast and simple string validation.
+<h1 align="center"><a href="https://twitter.com/intent/tweet?text=Checkout%20ValidateTor%3A%20Android%20library%20for%20fast%20and%20simple%20string%20validation%F0%9F%98%8E%26via%3Dnisrulz%26hashtags%3DAndroidDev%2Candroid%2Clibrary%2COpenSource">
+        <img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"/>
+    </a></h1>
+
+<div align="center">
+  <strong>Android library for fast and simple string validation.</strong>
+</div>
+<br/>
+<div align="center">
+    <!-- Bintray -->
+    <a href="https://bintray.com/nisrulz/maven/validatetor/_latestVersion">
+        <img src="https://api.bintray.com/packages/nisrulz/maven/validatetor/images/download.svg"/>
+    </a>
+    <!-- API -->
+    <a href="https://android-arsenal.com/api?level=14">
+        <img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat"/>
+    </a>
+    <!-- GitHub stars -->
+    <a href="https://github.com/nisrulz/validatetor">
+        <img src="https://img.shields.io/github/stars/nisrulz/validatetor.svg?style=social&label=Star"/>
+    </a>
+    <!-- GitHub forks -->
+    <a href="https://github.com/nisrulz/validatetor/fork">
+        <img src="https://img.shields.io/github/forks/nisrulz/validatetor.svg?style=social&label=Fork"/>
+    </a>
+    <!-- GitHub watchers -->
+    <a href="https://github.com/nisrulz/validatetor">
+        <img src="https://img.shields.io/github/watchers/nisrulz/validatetor.svg?style=social&label=Watch"/>
+    </a>
+    <!-- Say Thanks! -->
+    <a href="https://saythanks.io/to/nisrulz">
+        <img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg"/>
+    </a>
+    <a href="https://www.paypal.me/nisrulz/5usd">
+        <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+    </a>
+    <br/>
+     <!-- GitHub followers -->
+    <a href="https://github.com/nisrulz/validatetor">
+        <img src="https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow%20@nisrulz"/>
+    </a>
+    <!-- Twitter Follow -->
+    <a href="https://twitter.com/nisrulz">
+        <img src="https://img.shields.io/twitter/follow/nisrulz.svg?style=social"/>
+    </a>
+</div>
+
+<div align="center">
+  <sub>Built with ❤︎ by
+  <a href="https://twitter.com/nisrulz">Nishant Srivastava</a> and
+  <a href="https://github.com/nisrulz/validatetor/graphs/contributors">
+    contributors
+  </a>
+</div>
+<br/>
+<br/>
 
 # Including in your project
 ValidateTor is available in Jcenter, so getting it as simple as adding it as a dependency
@@ -102,4 +159,12 @@ If you wish to extend ValidateTor, use the `RegexMatcher` class. Create your own
 Licensed under the Apache License, Version 2.0, [click here for the full license](/LICENSE.txt).
 
 ## Author & support
-This project was created by [Nishant Srivastava](https://github.com/nisrulz/) but hopefully developed and maintained by many others. See the [the list of contributors here](https://github.com/nisrulz/validatetor/graphs/contributors).
+This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisrulz.github.io#nishant-srivastava) but hopefully developed and maintained by many others. See the [the list of contributors here](https://github.com/nisrulz/validatetor/graphs/contributors).
+
+> If you appreciate my work, consider buying me a cup of :coffee: to keep me recharged :metal:
+>  + [PayPal](https://www.paypal.me/nisrulz/5usd)
+>  + Bitcoin Address: 13PjuJcfVW2Ad81fawqwLtku4bZLv1AxCL
+>
+> I love using my work and I'm available for contract work. Freelancing helps to maintain and keep [my open source projects](https://github.com/nisrulz/) up to date!
+
+<img src="http://forthebadge.com/images/badges/built-for-android.svg" />
