@@ -67,19 +67,23 @@ class MainActivity : AppCompatActivity() {
   private fun validatePasswordField(editText: EditText) {
     val str = editText.text.toString()
 
-    if (validateTor.isEmpty(str)) {
-      editText.error = "Field is empty!"
-    }
+    validator.apply{
+      if (isEmpty(str)) {
+        editText.error = "Field is empty!"
+      }
 
-    if (validateTor.isAtleastLength(str, 8)
-        && validateTor.hasAtleastOneDigit(str)
-        && validateTor.hasAtleastOneUppercaseCharacter(str)
-        && validateTor.hasAtleastOneSpecialCharacter(str)) {
-      Toast.makeText(this, "Valid Password!", Toast.LENGTH_SHORT).show()
-    } else {
-      editText.error = "Password needs to be of minimum length of 8 characters and should " +
-          "have " + "atleast 1 digit, 1 upppercase letter and 1 special character "
-    }
+      if (isAtleastLength(str, 8)
+              && hasAtleastOneDigit(str)
+              && hasAtleastOneUppercaseCharacter(str)
+              && hasAtleastOneSpecialCharacter(str)) {
+        Toast.makeText(this, "Valid Password!", Toast.LENGTH_SHORT).show()
+      } else {
+        editText.error = "Password needs to be of minimum length of 8 characters and should " +
+                "have " + "atleast 1 digit, 1 upppercase letter and 1 special character "
+      }
+     }
+
+
   }
 
   private fun validateEmailField(editText: EditText) {
