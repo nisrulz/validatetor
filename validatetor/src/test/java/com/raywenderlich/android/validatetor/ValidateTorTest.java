@@ -22,11 +22,13 @@
 
 package com.raywenderlich.android.validatetor;
 
+import org.json.JSONException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ValidateTorTest {
 
@@ -239,6 +241,13 @@ public class ValidateTorTest {
   @Test
   public void isValidMD5_shouldReturnFalse_whenStringIsInvalidMD5() throws Exception {
     assertEquals(false, validateTor.isValidMD5("5d41402abc4b2a76b9719d911017"));
+  }
+
+  // Not work, maybe only in Android JUnit test.
+  @Test
+  public void isJson_shouldReturnTrue_whenStringIsJsonArray() throws JSONException {
+    assertTrue(validateTor.isJSON("[]"));
+    assertTrue(validateTor.isJSON("[{\"id\":1}]"));
   }
 
   @Test

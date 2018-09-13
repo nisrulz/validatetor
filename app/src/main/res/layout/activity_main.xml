@@ -57,9 +57,9 @@
       android:id="@+id/textInputLayout3"
       android:layout_width="0dp"
       android:layout_height="57dp"
-      android:layout_marginBottom="270dp"
+      android:layout_marginBottom="12dp"
       android:layout_marginTop="12dp"
-      app:layout_constraintBottom_toTopOf="@+id/btn_validate"
+      app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
@@ -71,6 +71,27 @@
         android:hint="@string/credit_card"
         android:inputType="number"
         android:maxLines="1"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+      android:id="@+id/textInputLayout4"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="180dp"
+      android:layout_marginTop="12dp"
+      app:layout_constraintBottom_toTopOf="@+id/btn_validate"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/edt_json"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/json"
+        android:maxLines="1"
+        android:text="@string/json_test" />
 
   </android.support.design.widget.TextInputLayout>
 
