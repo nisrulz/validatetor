@@ -261,7 +261,7 @@ public class ValidateTor {
       } catch (JSONException ex1) {
         return false;
       }
-      return false;
+      return true;
     }
     return true;
   }
