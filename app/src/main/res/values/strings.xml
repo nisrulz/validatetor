@@ -3,5 +3,7 @@
   <string name="email">Email</string>
   <string name="password">Password</string>
   <string name="credit_card">Credit Card Number</string>
+  <string name="json">Json</string>
+  <string name="json_test">[]</string>
   <string name="validate">Validate</string>
 </resources>

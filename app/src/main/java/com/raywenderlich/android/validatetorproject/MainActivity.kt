@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
       validateEmailField(edt_email)
       validatePasswordField(edt_password)
       validateCreditCardField(edt_creditcard)
+      validateJsonField(edt_json)
     }
   }
 
@@ -97,6 +98,20 @@ class MainActivity : AppCompatActivity() {
       editText.error = "Invalid Email entered!"
     } else {
       Toast.makeText(this, "Valid Email!", Toast.LENGTH_SHORT).show()
+    }
+  }
+
+  private fun validateJsonField(editText: EditText) {
+    val str = editText.text.toString()
+
+    if (validateTor.isEmpty(str)) {
+      editText.error = "Field is empty!"
+    }
+
+    if (!validateTor.isJSON(str)) {
+      editText.error = "Invalid Json entered!"
+    } else {
+      Toast.makeText(this, "Valid Json!", Toast.LENGTH_SHORT).show()
     }
   }
 }
