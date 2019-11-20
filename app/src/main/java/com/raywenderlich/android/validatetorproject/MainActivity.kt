@@ -23,15 +23,20 @@
 package com.raywenderlich.android.validatetorproject
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.raywenderlich.android.validatetor.ValidateTor
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
   private lateinit var validateTor: ValidateTor
+  private lateinit var btn_validate: Button
+  private lateinit var edt_email: EditText
+  private lateinit var edt_creditcard: EditText
+  private lateinit var edt_password: EditText
+  private lateinit var edt_json: EditText
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -43,6 +48,12 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun setUpUiWidgets() {
+    btn_validate = findViewById(R.id.btn_validate)
+    edt_email = findViewById(R.id.edt_email)
+    edt_creditcard = findViewById(R.id.edt_creditcard)
+    edt_password = findViewById(R.id.edt_password)
+    edt_json = findViewById(R.id.edt_json)
+
     btn_validate.setOnClickListener {
       validateEmailField(edt_email)
       validatePasswordField(edt_password)
@@ -61,14 +72,14 @@ class MainActivity : AppCompatActivity() {
     if (!validateTor.validateCreditCard(str)) {
       editText.error = "Invalid Credit Card number!"
     } else {
-      Toast.makeText(this, "Valid Credit Card Number!", Toast.LENGTH_SHORT).show()
+      showToast("Valid Credit Card Number!")
     }
   }
 
   private fun validatePasswordField(editText: EditText) {
     val str = editText.text.toString()
 
-    validator.apply{
+    validateTor.apply{
       if (isEmpty(str)) {
         editText.error = "Field is empty!"
       }
@@ -77,7 +88,7 @@ class MainActivity : AppCompatActivity() {
               && hasAtleastOneDigit(str)
               && hasAtleastOneUppercaseCharacter(str)
               && hasAtleastOneSpecialCharacter(str)) {
-        Toast.makeText(this, "Valid Password!", Toast.LENGTH_SHORT).show()
+         showToast("Valid Password!")
       } else {
         editText.error = "Password needs to be of minimum length of 8 characters and should " +
                 "have " + "atleast 1 digit, 1 upppercase letter and 1 special character "
@@ -97,7 +108,7 @@ class MainActivity : AppCompatActivity() {
     if (!validateTor.isEmail(str)) {
       editText.error = "Invalid Email entered!"
     } else {
-      Toast.makeText(this, "Valid Email!", Toast.LENGTH_SHORT).show()
+      showToast("Valid Email!")
     }
   }
 
@@ -111,7 +122,11 @@ class MainActivity : AppCompatActivity() {
     if (!validateTor.isJSON(str)) {
       editText.error = "Invalid Json entered!"
     } else {
-      Toast.makeText(this, "Valid Json!", Toast.LENGTH_SHORT).show()
+      showToast("Valid Json!")
     }
+  }
+
+  private fun showToast(txt:String){
+    Toast.makeText(this, txt, Toast.LENGTH_SHORT).show()
   }
 }
