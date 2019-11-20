@@ -9,7 +9,7 @@ android {
     versionCode rootProject.ext.libVersionCode
     versionName rootProject.ext.libVersionName
 
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
   }
 

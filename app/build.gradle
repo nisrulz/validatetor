@@ -2,8 +2,6 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
-
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   
@@ -13,7 +11,7 @@ android {
     targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode 1
     versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
     release {
@@ -21,23 +19,27 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
 }
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   // Kotlin
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
   // Support
-  implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibVersion"
-  implementation "com.android.support:design:$rootProject.ext.supportLibVersion"
-  implementation "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintLayoutVersion"
+  implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompat"
+  implementation "com.google.android.material:material:$rootProject.ext.materialDesign"
 
   // Testing
   testImplementation "junit:junit:$rootProject.ext.junitVersion"
-  androidTestImplementation "com.android.support.test:runner:$rootProject.ext.testRunnerVersion"
-  androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoCoreVersion"
+  androidTestImplementation "androidx.test:runner:$rootProject.ext.testRunnerVersion"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.ext.espressoCoreVersion"
 
   // using validatetor android library module as a dependency
   // implementation project(':validatetor')

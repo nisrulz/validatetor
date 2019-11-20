@@ -33,14 +33,15 @@ task clean(type: Delete) {
 
 ext {
   // Project
-  targetSdkVersion = 28
+  targetSdkVersion = 29
   minSdkVersion = 14
   compileSdkVersion = targetSdkVersion
-  supportLibVersion = '28.0.0'
-  constraintLayoutVersion = "1.1.3"
+  appcompat = '1.1.0'
+  materialDesign = '1.0.0'
+  constraintLayoutVersion = "2.0.0-beta2"
   junitVersion = "4.12"
-  testRunnerVersion = "1.0.2"
-  espressoCoreVersion = "3.0.2"
+  testRunnerVersion = "1.2.0"
+  espressoCoreVersion = "3.2.0"
 
   // ValidateTor Library Info
   libVersionCode = 1
