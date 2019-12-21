@@ -42,8 +42,8 @@ dependencies {
   androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.ext.espressoCoreVersion"
 
   // using validatetor android library module as a dependency
-  // implementation project(':validatetor')
+   implementation project(':validatetor')
 
   // using validatetor android library as a maven dependency
-  implementation 'com.github.nisrulz:validatetor:1.0.0'
+//  implementation 'com.github.nisrulz:validatetor:1.0.0'
 }
